@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@mixin scrollbar() {
+  &::-webkit-scrollbar {
+    @apply h-[6px] w-[6px];
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-gray-light;
+    border-radius: 100px;
+    position: absolute !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply border-2 border-transparent bg-transparent;
+
+    border-radius: 100px;
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      @apply bg-gray;
+    }
+  }
+}
+
+@layer base {
+  :root {
+    --main-dark: 28, 37, 48;
+    --dev-dark: 19, 23, 34;
+    --green: 111, 207, 151;
+    --red: 230, 87, 87;
+    --blue: 24, 162, 217;
+    --gray: 113, 130, 152;
+    --orange: 242, 153, 74;
+    --yellow: 242, 201, 76;
+    --white: 243, 244, 246;
+    --gray-light: 205, 215, 227;
+    --gray-dark: 42, 52, 65;
+  }
+}
+
+@layer components {
+  .scrollbar-thin {
+    @include scrollbar();
+  }
+}
+
+input[type='date']::-webkit-calendar-picker-indicator,
+input[type='time']::-webkit-calendar-picker-indicator {
+  filter: invert(100%) sepia(0%) saturate(7484%) hue-rotate(329deg)
+    brightness(107%) contrast(103%);
+}

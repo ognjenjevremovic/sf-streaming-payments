@@ -1,0 +1,7 @@
+.wallet-adapter-button {
+  @apply w-max;
+
+  &:not([disabled]):hover {
+    @apply bg-opacity-90 bg-blue;
+  }
+}

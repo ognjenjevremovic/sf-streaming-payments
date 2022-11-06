@@ -1,0 +1,9 @@
+.loader-backdrop {
+  @apply fixed top-0 bottom-0 left-0 right-0 z-10 cursor-wait p-0 m-0;
+  background-color: rgba(var(--gray-light), 0.15);
+}
+
+.loader {
+  @apply w-[50px] h-[50px] absolute inset-1/2 -ml-[25px] -mt-[25px];
+  @apply border-blue border-solid border-[10px] border-x-transparent rounded-full;
+}
